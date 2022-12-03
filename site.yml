@@ -4,11 +4,6 @@
   gather_facts: true
 
   tasks:
-    - name: Create user
-      ansible.builtin.user:
-        name: "{{ app_user_id }}"
-        uid: 1040
-
     # Use {{ aptcachetime }} variable to specify cache time
     # Find implementation in https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_module.html#examples
     - name: Install some basic packages defined in variable "packages"
